@@ -1,0 +1,81 @@
+{
+  "name": "smashing-app",
+  "version": "1.0.0",
+  "description": "React.js universal app for Smashing Magazine",
+  "main": "src/client.jsx",
+  "scripts": {
+    "build": "better-npm-run build",
+    "webpack-devserver": "webpack-dev-server --debug --hot --devtool eval-source-map --output-pathinfo --watch --colors --inline --content-base public --port 8050 --host 0.0.0.0",
+    "nodemon": "better-npm-run nodemon",
+    "lint": "eslint src --ext .js,.jsx",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "betterScripts": {
+    "build": {
+      "command": "webpack -p",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "nodemon": {
+      "command": "nodemon server.js",
+      "env": {
+        "NODE_PATH": "src"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yury-dymov/smashing-app.git"
+  },
+  "keywords": [
+    "react.js",
+    "univeral",
+    "redux",
+    "oauth2",
+    "SmashingMagazine"
+  ],
+  "author": "Yury Dymov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yury-dymov/smashing-app/issues"
+  },
+  "homepage": "https://github.com/yury-dymov/smashing-app#readme",
+  "dependencies": {
+    "babel-core": "^6.18.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "bluebird": "^3.4.6",
+    "express": "^4.14.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.0.0",
+    "babel-loader": "^6.2.5",
+    "better-npm-run": "0.0.11",
+    "clean-webpack-plugin": "^0.1.13",
+    "css-loader": "^0.25.0",
+    "eslint": "^3.8.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-loader": "^1.6.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "html-loader": "^0.4.4",
+    "json-loader": "^0.5.4",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "nodemon": "^1.11.0",
+    "postcss-loader": "^1.0.0",
+    "react-hot-loader": "^1.2.9",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
